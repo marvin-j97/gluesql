@@ -1,0 +1,31 @@
+[package]
+name = "gluesql_fjall_storage"
+authors = ["marvin-j97"]
+version.workspace = true
+edition.workspace = true
+description.workspace = true
+license.workspace = true
+repository.workspace = true
+documentation.workspace = true
+
+[dependencies]
+gluesql-core.workspace = true
+utils.workspace = true
+async-trait = "0.1"
+iter-enum = "1"
+serde = { version = "1", features = ["derive"] }
+thiserror = "1"
+bincode = "1"
+fjall = { path = "../../../fjall" }
+async-io = "1"
+futures = "0.3"
+self_cell = "1.0.4"
+
+[dev-dependencies]
+test-suite.workspace = true
+criterion = "0.3"
+tokio = { version = "1", features = ["rt", "macros"] }
+
+# [[bench]]
+# name = "fjall_benchmark"
+# harness = false
